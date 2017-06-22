@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nyc2"
+    tools:context="com.example.pandrews.login.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/greyBox"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignBottom="@+id/forgotPassword"
+        android:layout_alignEnd="@+id/login"
+        android:layout_alignLeft="@+id/cancel"
+        android:layout_alignRight="@+id/login"
+        android:layout_alignStart="@+id/cancel"
+        android:layout_alignTop="@+id/loginMessage"
+        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/password"
+        android:onClick="onCancel"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/colorCancel"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLogin"
+        android:text="Login"
+        android:layout_alignBaseline="@+id/cancel"
+        android:layout_alignBottom="@+id/cancel"
+        android:layout_toRightOf="@+id/forgotPassword"
+        android:layout_toEndOf="@+id/forgotPassword"
+        android:onClick="onClick"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorGray"
+        android:ems="10"
+        android:hint="E-mail address"
+        android:inputType="textEmailAddress"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/greyBox"
+        android:layout_alignStart="@+id/greyBox"
+        android:layout_alignRight="@+id/greyBox"
+        android:layout_alignEnd="@+id/greyBox" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/email"
+        android:layout_alignLeft="@+id/email"
+        android:layout_alignRight="@+id/email"
+        android:layout_alignStart="@+id/email"
+        android:layout_below="@+id/email"
+        android:textColorHint="@color/colorGray"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I forgot my password"
+        android:textColor="@color/colorForgotPassword"
+        android:layout_below="@+id/cancel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/loginMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login. Here we go!"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhiteText"
+        android:layout_above="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>
